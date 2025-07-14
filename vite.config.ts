@@ -12,6 +12,11 @@ export default defineConfig(({ mode }) => {
         alias: {
           '@': path.resolve(__dirname, '.'),
         }
+      },
+        build: {
+        rollupOptions: {
+          external: ['./components/Navbar'] // Not usually needed unless you're doing weird dynamic stuff
+        }
       }
     };
 });
